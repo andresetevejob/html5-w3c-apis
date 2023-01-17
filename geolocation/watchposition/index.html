@@ -1,0 +1,30 @@
+<!DOCTYPE html lang="fr">
+<head>
+    <title>GET COORDS API - WATCH POSITION</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <button onclick="watchPosition()">Watch Position</button>
+  <button onclick="stopWatching()">Stop watch Position</button>
+  
+</body>
+<script>
+    let  watchId = -1
+    function watchPosition(){
+        if(navigator.geolocation){
+            watchId = navigator.geolocation.watchPosition(success);
+        }
+    }
+    function stopWatching(){
+        if(navigator.geolocation){
+            navigator.geolocation.clearWatch(watchId);
+        }
+    }
+    const demo = document.getElementById("demo");
+    function success(pos){
+        alert(`Located ${pos.coords.latitude}, ${pos.coords.longitude}`)
+    }
+    
+</script>
+
+</html>

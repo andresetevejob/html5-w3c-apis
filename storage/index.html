@@ -1,0 +1,54 @@
+<!DOCTYPE html lang="fr">
+<head>
+    <title>MA LISTE DE COURSE</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="list">
+  <h1><span id="user_name"></span>Tasks</h1>
+  <header>
+    <nav>
+        <ul>
+           <li><a href="#list" class="list">Liste des tâches</a></li>
+           <li><a href="#add" class="add">Ajout de tâche</a></li>
+           <li><a href="#settings" class="settings">Settings</a></li>
+        </ul>
+     </nav>
+  </header>
+  <section class="list">
+    <form name="search"><input type="search" name="query" placeholder="Entrez votre tâche"></form>
+    <ul id="task_list"></ul>
+  </section>
+  <section class="add">
+    <form name="add">
+        <label>
+            Description de la tâche
+            <textarea name="desc"></textarea>
+        </label>
+        <label>
+             Date butoir
+            <input type="date" name="due_date"/>
+        </label>
+        <input type="submit" value="Ajout de tâche">
+    </form>
+  </section>
+  <section class="settings">
+    <form name="settings">
+        <label>
+            Votre nom
+            <input type="text" name="name"/>
+        </label>
+        <label>
+            Choix de la couleur
+            <select name="color_scheme">
+                <option>Blue</option>
+                <option>Red</option>
+                <option>Green</option>
+            </select>
+        </label>
+        <input type="submit" value="Enregistrer">
+        <input type="reset" value="Restaurer">
+    </form>
+  </section>
+</body>
+<script src="app.js"></script>
+</html>
