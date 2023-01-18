@@ -1,5 +1,5 @@
 console.log("service worker a demarré");
-console.log(self);
+console.log(self);//
 self.addEventListener("install",(ev)=>{
     console.log("installed");
 })

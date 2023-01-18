@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>websocket-tp1</title>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    </head>
+    <script>
+        var socket = io('http://localhost:5000');
+        socket.on("greeting-from-server",function(message){
+            document.body.appendChild(
+                document.createTextNode(message.greeting)
+            );
+        });
+        socket.emit('greeting-from-client',{
+            greeting:"Hello server"
+        })
+    </script>
+</html>
